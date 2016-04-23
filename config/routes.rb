@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :companies
 
+  root 'companies#index'
   get 'home' => 'companies#index'
 
   get 'company/new' => 'companies#new'
+  get 'company/:id' => 'companies#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
