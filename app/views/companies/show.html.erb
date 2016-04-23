@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @company.address %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @company.about %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @company.twitter %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @company.linkedin %>
+</p>
+
+<p>
+  <strong>Instagram:</strong>
+  <%= @company.instagram %>
+</p>
+
+<p>
+  <strong>Perks:</strong>
+  <%= @company.perks %>
+</p>
+
+<p>
+  <strong>Ceo:</strong>
+  <%= @company.ceo %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
