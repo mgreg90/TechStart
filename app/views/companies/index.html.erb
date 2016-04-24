@@ -113,21 +113,10 @@
     <!-- Added by Mike -->
     <div class="row featurette">
       <div class="owl-carousel">
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar1"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar2"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar3"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar4"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar5"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar6"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar7"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar8"></div>
-        <div class="slide"><img src="http://placehold.it/350x150&text=FooBar9"></div>
+        <% @companies.each do |company|%>
+        <div class="slide"><%= image_tag company.logo %></div>
+        <% end %>
       </div>
-      <!-- from Sam's template -->
-      <!-- <div class="col-md-7">
-      <h2 class="featurette-heading">Sam, break page here. <span class="text-muted">It'll blow your mind.</span></h2>
-      <p class="lead">Project Zero Scroll Bar</p>
-    </div> -->
   </div>
 
   <hr class="featurette-divider">
