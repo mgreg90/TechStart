@@ -12,36 +12,84 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, "Company Name:" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :address %><br>
+    <%= f.label :address, "Company Address:" %><br>
     <%= f.text_field :address %>
   </div>
   <div class="field">
-    <%= f.label :about %><br>
+    <%= f.label :city, "City:" %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state, "State:" %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip, "Zip Code:" %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label "Mission Statement:" %><br>
     <%= f.text_area :about %>
   </div>
   <div class="field">
-    <%= f.label :twitter %><br>
+    <%= f.label :twitter, "Twitter Handle:" %><br>
     <%= f.text_field :twitter %>
   </div>
   <div class="field">
-    <%= f.label :linkedin %><br>
+    <%= f.label :linkedin, "LinkedIn Username:" %><br>
     <%= f.text_field :linkedin %>
   </div>
   <div class="field">
-    <%= f.label :instagram %><br>
+    <%= f.label :instagram, "Instagram Username:" %><br>
     <%= f.text_field :instagram %>
   </div>
   <div class="field">
-    <%= f.label :perks %><br>
+    <%= f.label :perks, "Choose Perks:" %><br>
     <%= f.text_field :perks %>
   </div>
   <div class="field">
-    <%= f.label :ceo %><br>
+    <%= f.label :ceo, "CEO Name:" %><br>
     <%= f.text_field :ceo %>
+  </div>
+  <div class="field">
+    <%= f.label :numberofemployees, "Number of Employees:" %><br>
+    <%= f.text_field :numberofemployees %>
+  </div>
+  <div class="field">
+    <%= f.label :PointofContactName, "Point of Contact Name:" %><br>
+    <%= f.text_field :PointofContactName %>
+  </div>
+  <div class="field">
+    <%= f.label :PointofContactemail, "Point of Contact Email:" %><br>
+    <%= f.text_field :PointofContactemail %>
+  </div>
+  <div class="field">
+    <%= f.label :PointofContactPhone, "Point of Contact Phone Number:" %><br>
+    <%= f.text_field :PointofContactPhone %>
+  </div>
+  <div class="field">
+    <%= f.label :industry, "Choose Industry" %><br>
+    <%= f.text_field :industry %>
+  </div>
+  <div class="field">
+    <%= f.label :amenities, "Choose Amenities:" %><br>
+    <%= f.text_field :amenities %>
+  </div>
+  <div class="field">
+    <%= f.label :qualifications, "Technologies used:" %><br>
+    <%= f.text_field :qualifications %>
+  </div>
+  <div class="field">
+    <%= f.label :meetup, "Meetup Profile:" %><br>
+    <%= f.text_field :meetup %>
+  </div>
+  <div class="field">
+    <%= f.label :logo, "URL to Company Logo" %><br>
+    <%= f.text_field :logo %>
   </div>
   <div class="actions">
     <%= f.submit %>
