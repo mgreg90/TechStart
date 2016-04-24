@@ -20,7 +20,6 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
-    before_action :authenticate_user!
   end
 
   # POST /companies
