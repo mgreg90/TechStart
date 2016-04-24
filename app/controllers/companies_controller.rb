@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /companies
   # GET /companies.json
   def index
@@ -20,6 +20,7 @@ class CompaniesController < ApplicationController
 
   # GET /companies/1/edit
   def edit
+    before_action :authenticate_user!
   end
 
   # POST /companies
