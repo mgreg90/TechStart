@@ -141,3 +141,22 @@
   height: 25vh;
   width: auto;
 }
+
+#techstart_logo {
+  height:260%;
+  width: auto;
+  margin-top: -17px;
+  margin-left: -31px;
+}
+
+.navbar-brand {
+  display:flex;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
+h3 {
+  color: white;
+  margin:-7px 0 0 -25px;
+  font-size: 28pt;
+}
