@@ -11,6 +11,25 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @name = Company.find(params[:id]).name
+    @address = Company.find(params[:id]).address
+    @about = Company.find(params[:id]).about
+    @twitter = Company.find(params[:id]).twitter
+    @linkedin = Company.find(params[:id]).linkedin
+    @instagram = Company.find(params[:id]).instagram
+    @perks = Company.find(params[:id]).perks
+    @ceo = Company.find(params[:id]).ceo
+    @numberofemployees = Company.find(params[:id]).numberofemployees
+    @pointOfContactName = Company.find(params[:id]).pointOfContactName
+    @pointOfContactEmail = Company.find(params[:id]).pointOfContactEmail
+    @pointOfContactPhone = Company.find(params[:id]).pointOfContactPhone
+    @industry = Company.find(params[:id]).industry
+    @amenities = Company.find(params[:id]).amenities
+    @qualifications = Company.find(params[:id]).qualifications
+    @city = Company.find(params[:id]).city
+    @state = Company.find(params[:id]).state
+    @zip = Company.find(params[:id]).zip
+    @meetup = Company.find(params[:id]).meetup
+    @logo = Company.find(params[:id]).logo
   end
 
   # GET /companies/new
@@ -63,13 +82,13 @@ class CompaniesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_company
-      @company = Company.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_company
+    @company = Company.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def company_params
-      params.require(:company).permit(:name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def company_params
+    params.require(:company).permit(:name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo)
+  end
 end
