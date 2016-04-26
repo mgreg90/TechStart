@@ -12,33 +12,33 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @id = params[:id]
-    @name = Company.find(params[:id]).name
-    @address = Company.find(params[:id]).address
-    @about = Company.find(params[:id]).about
-    @twitter = Company.find(params[:id]).twitter
-    @linkedin = Company.find(params[:id]).linkedin
-    @instagram = Company.find(params[:id]).instagram
-    @perks = Company.find(params[:id]).perks
-    @ceo = Company.find(params[:id]).ceo
-    @numberofemployees = Company.find(params[:id]).numberofemployees
-    @pointOfContactName = Company.find(params[:id]).pointOfContactName
-    @pointOfContactEmail = Company.find(params[:id]).pointOfContactEmail
-    @pointOfContactPhone = Company.find(params[:id]).pointOfContactPhone
-    @industry = Company.find(params[:id]).industry
-    @amenities = Company.find(params[:id]).amenities
-    @qualifications = Company.find(params[:id]).qualifications
-    @city = Company.find(params[:id]).city
-    @state = Company.find(params[:id]).state
-    @zip = Company.find(params[:id]).zip
-    @meetup = Company.find(params[:id]).meetup
-    @logo = Company.find(params[:id]).logo
-    @benefits = Company.find(params[:id]).benefits
+    @name = Company.find(@id).name
+    @address = Company.find(@id).address
+    @about = Company.find(@id).about
+    @twitter = Company.find(@id).twitter
+    @linkedin = Company.find(@id).linkedin
+    @instagram = Company.find(@id).instagram
+    @perks = Company.find(@id).perks
+    @ceo = Company.find(@id).ceo
+    @numberofemployees = Company.find(@id).numberofemployees
+    @pointOfContactName = Company.find(@id).pointOfContactName
+    @pointOfContactEmail = Company.find(@id).pointOfContactEmail
+    @pointOfContactPhone = Company.find(@id).pointOfContactPhone
+    @industry = Company.find(@id).industry
+    @amenities = Company.find(@id).amenities
+    @qualifications = Company.find(@id).qualifications
+    @city = Company.find(@id).city
+    @state = Company.find(@id).state
+    @zip = Company.find(@id).zip
+    @meetup = Company.find(@id).meetup
+    @logo = Company.find(@id).logo
+    @benefits = Company.find(@id).benefits
   end
 
   # GET /companies/new
   def new
     @company = Company.new
-    @user = current_user
+    @user_id = current_user
   end
 
   # GET /companies/1/edit
@@ -48,8 +48,8 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.json
   def create
-    @user = current_user
-    @company = Company.new(company_params)
+    @user_id = current_user
+    @company = current_user.companies.build(company_params)
 
     respond_to do |format|
       if @company.save

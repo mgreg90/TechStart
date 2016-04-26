@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20160426214453) do
     t.string   "zip"
     t.string   "meetup"
     t.string   "logo"
-    t.string   "benefits"
     t.integer  "user_id"
+    t.string   "benefits"
   end
 
   add_index "companies", ["user_id"], name: "index_companies_on_user_id", using: :btree
