@@ -1,97 +1,104 @@
 <%= form_for(@company) do |f| %>
-  <% if @company.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
+<% if @company.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
 
-      <ul>
-      <% @company.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <ul>
+    <% @company.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class = "form_container">
+  <div class = "form_div">
+    <div class="field">
+      <%= f.label :name, "Company Name:" %><br>
+      <%= f.text_field :name %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name, "Company Name:" %><br>
-    <%= f.text_field :name %>
+    <div class="field">
+      <%= f.label :address, "Company Address:" %><br>
+      <%= f.text_field :address %>
+    </div>
+    <div class="field">
+      <%= f.label :city, "City:" %><br>
+      <%= f.text_field :city %>
+    </div>
+    <div class="field">
+      <%= f.label :state, "State:" %><br>
+      <%= f.text_field :state %>
+    </div>
+    <div class="field">
+      <%= f.label :zip, "Zip Code:" %><br>
+      <%= f.text_field :zip %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :address, "Company Address:" %><br>
-    <%= f.text_field :address %>
+  <div class = "form_div">
+    <div class="field">
+      <%= f.label "Mission Statement:" %><br>
+      <%= f.text_area :about %>
+    </div>
+    <div class="field">
+      <%= f.label :numberofemployees, "Number of Employees:" %><br>
+      <%= f.text_field :numberofemployees %>
+    </div>
+    <div class="field">
+      <%= f.label :ceo, "CEO Name:" %><br>
+      <%= f.text_field :ceo %>
+    </div>
+    <div class="field">
+      <%= f.label :perks, "Choose Perks:" %><br>
+      <%= f.text_field :perks %>
+    </div>
+    <div class="field">
+      <%= f.label :industry, "Choose Industry" %><br>
+      <%= f.text_field :industry %>
+    </div>
+    <div class="field">
+      <%= f.label :amenities, "Choose Amenities:" %><br>
+      <%= f.text_field :amenities %>
+    </div>
+    <div class="field">
+      <%= f.label :qualifications, "Technologies used:" %><br>
+      <%= f.text_field :qualifications %>
+    </div>
+    <div class="field">
+      <%= f.label :logo, "URL to Company Logo" %><br>
+      <%= f.text_field :logo %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :city, "City:" %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :state, "State:" %><br>
-    <%= f.text_field :state %>
-  </div>
-  <div class="field">
-    <%= f.label :zip, "Zip Code:" %><br>
-    <%= f.text_field :zip %>
-  </div>
-  <div class="field">
-    <%= f.label "Mission Statement:" %><br>
-    <%= f.text_area :about %>
-  </div>
-  <div class="field">
-    <%= f.label :twitter, "Twitter Handle:" %><br>
-    <%= f.text_field :twitter %>
-  </div>
-  <div class="field">
-    <%= f.label :linkedin, "LinkedIn Username:" %><br>
-    <%= f.text_field :linkedin %>
-  </div>
-  <div class="field">
-    <%= f.label :instagram, "Instagram Username:" %><br>
-    <%= f.text_field :instagram %>
-  </div>
-  <div class="field">
-    <%= f.label :perks, "Choose Perks:" %><br>
-    <%= f.text_field :perks %>
-  </div>
-  <div class="field">
-    <%= f.label :ceo, "CEO Name:" %><br>
-    <%= f.text_field :ceo %>
-  </div>
-  <div class="field">
-    <%= f.label :numberofemployees, "Number of Employees:" %><br>
-    <%= f.text_field :numberofemployees %>
-  </div>
-  <div class="field">
-    <%= f.label :pointOfContactName, "Point of Contact Name:" %><br>
-    <%= f.text_field :pointOfContactName %>
-  </div>
-  <div class="field">
-    <%= f.label :pointOfContactEmail, "Point of Contact Email:" %><br>
-    <%= f.text_field :pointOfContactEmail %>
-  </div>
-  <div class="field">
-    <%= f.label :pointOfContactPhone, "Point of Contact Phone Number:" %><br>
-    <%= f.text_field :pointOfContactPhone %>
-  </div>
-  <div class="field">
-    <%= f.label :industry, "Choose Industry" %><br>
-    <%= f.text_field :industry %>
-  </div>
-  <div class="field">
-    <%= f.label :amenities, "Choose Amenities:" %><br>
-    <%= f.text_field :amenities %>
-  </div>
-  <div class="field">
-    <%= f.label :qualifications, "Technologies used:" %><br>
-    <%= f.text_field :qualifications %>
-  </div>
-  <div class="field">
-    <%= f.label :meetup, "Meetup Profile:" %><br>
-    <%= f.text_field :meetup %>
-  </div>
-  <div class="field">
-    <%= f.label :logo, "URL to Company Logo" %><br>
-    <%= f.text_field :logo %>
+  <div class = "form_div">
+    <div class="field">
+      <%= f.label :twitter, "Twitter Handle:" %><br>
+      <%= f.text_field :twitter %>
+    </div>
+    <div class="field">
+      <%= f.label :linkedin, "LinkedIn Username:" %><br>
+      <%= f.text_field :linkedin %>
+    </div>
+    <div class="field">
+      <%= f.label :instagram, "Instagram Username:" %><br>
+      <%= f.text_field :instagram %>
+    </div>
+    <div class="field">
+      <%= f.label :meetup, "Meetup Profile:" %><br>
+      <%= f.text_field :meetup %>
+    </div>
+    <div class="field">
+      <%= f.label :pointOfContactName, "Point of Contact Name:" %><br>
+      <%= f.text_field :pointOfContactName %>
+    </div>
+    <div class="field">
+      <%= f.label :pointOfContactEmail, "Point of Contact Email:" %><br>
+      <%= f.text_field :pointOfContactEmail %>
+    </div>
+    <div class="field">
+      <%= f.label :pointOfContactPhone, "Point of Contact Phone Number:" %><br>
+      <%= f.text_field :pointOfContactPhone %>
+    </div>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>
