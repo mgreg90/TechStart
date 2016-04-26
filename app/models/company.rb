@@ -1,3 +1,4 @@
 class Company < ActiveRecord::Base
-  belongs_to :users
+  belongs_to :user
+  # validates :user, presence: true 
 end
