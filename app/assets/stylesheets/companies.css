@@ -248,7 +248,20 @@ h4 {
   margin-bottom: 1em;
 }
 
+
 .btn-lg {
   padding: 10px 80px !important;
   font-size: 30px !important;
+  }
+
+.social_media_box:hover p {
+  text-decoration: none;
+}
+
+.company_info_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+>>>>>>> abdd15a39a49c0682776a5af4fa1f3e60b92f6da
 }

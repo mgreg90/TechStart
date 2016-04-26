@@ -85,19 +85,19 @@
       <div class="row">
         <div class="col-lg-12 company_show_bar_container">
           <div class="well text-center company_show_bar">
-            <a href="https://twitter.com/<%= @twitter[1,@twitter.length] %>">
+            <a href="https://twitter.com/<%= @twitter[1,@twitter.length].downcase %>">
               <div class="social_media_box">
                 <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
                 <p><%= @twitter %></p>
               </div>
             </a>
-            <a href="https://www.linkedin.com/company/<%= @linkedin %>">
+            <a href="https://www.linkedin.com/company/<%= @linkedin.downcase %>">
               <div class="social_media_box">
                 <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
                 <p><%= @linkedin %></p>
               </div>
             </a>
-            <a href="https://www.instagram.com/<%= @instagram %>">
+            <a href="https://www.instagram.com/<%= @instagram.downcase %>">
               <div class="social_media_box">
                 <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
                 <p><%= @instagram %></p>
@@ -111,29 +111,14 @@
 
       <!-- Content Row -->
       <div class="row">
-        <div class="col-md-4">
-          <h2>Heading 1</h2>
-          <ul>
-            <li><%= @name %></li>
-            <li><%= @address %></li>
-            <li><%= @about %></li>
-            <li><%= @twitter %></li>
-            <li><%= @linkedin %></li>
-            <li><%= @instagram %></li>
-            <li><%= @perks %></li>
-            <li><%= @ceo %></li>
-            <li><%= @numberofemployees %></li>
-            <li><%= @pointOfContactName %></li>
-            <li><%= @pointOfContactEmail %></li>
-            <li><%= @pointOfContactPhone %></li>
-            <li><%= @industry %></li>
-            <li><%= @amenities %></li>
-            <li><%= @qualifications %></li>
-            <li><%= @city %></li>
-            <li><%= @state %></li>
-            <li><%= @zip %></li>
-            <li><%= @meetup %></li>
-            <li><%= @logo %></li>
+        <div class="col-md-4 company_info_list">
+          <h2>Company Information</h2>
+          <ul class = "company_info_list">
+            <li>Name: <%= @name %></li><br>
+            <li>Industry: <%= @industry %></li><br>
+            <li>Specialties: <%= @amenities %></li><br>
+            <li># of Employees: <%= @numberofemployees %></li><br>
+            <li>Benefits: <%= @benefits %></li><br>
           </ul>
         </div>
         <!-- /.col-md-4 -->
