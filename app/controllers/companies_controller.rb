@@ -11,6 +11,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    @id = params[:id]
     @name = Company.find(params[:id]).name
     @address = Company.find(params[:id]).address
     @about = Company.find(params[:id]).about
@@ -90,6 +91,6 @@ class CompaniesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_params
-    params.require(:company).permit(:name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo)
+    params.require(:company).permit(:id, :name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo)
   end
 end

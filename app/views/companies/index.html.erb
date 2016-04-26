@@ -108,7 +108,11 @@
     <div class="row featurette">
       <div class="owl-carousel">
         <% @companies.each do |company|%>
-        <div class="slide"><%= image_tag(company.logo) %></div>
+        <div class="slide">
+          <%= link_to(companies_path + "/" + company.id.to_s) do %>
+          <%= image_tag(company.logo) %>
+          <% end %>
+        </div>
         <% end %>
       </div>
     </div>
