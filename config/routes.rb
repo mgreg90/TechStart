@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :companies
-  devise_for :users
+  devise_for :users do
+    resources :companies
+  end
 
 
 
@@ -8,7 +10,6 @@ Rails.application.routes.draw do
   get 'home' => 'companies#index'
 
   get 'company/new' => 'companies#new'
-  get 'company/:id' => 'companies#show'
   get 'users/sign_up' => 'devise/registrations#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
