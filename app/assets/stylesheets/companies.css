@@ -100,7 +100,7 @@ color: #5a5a5a;
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-  
+
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
@@ -199,4 +199,16 @@ h3 {
 h4 {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.carousel-control:hover {
+  color: white;
+}
+
+.carousel-control:hover {
+  background-color: transparent;
+}
+
+.carousel-control.left {
+  background-color: linear-gradient(rgba(255,0,0,1),rgba(0, 0, 0, 1));
 }
