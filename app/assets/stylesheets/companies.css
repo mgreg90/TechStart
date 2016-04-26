@@ -193,3 +193,8 @@ h3 {
 .form_button {
   margin-left: 6.5vw;
 }
+
+h4 {
+  font-weight: bold;
+  text-decoration: underline;
+}
