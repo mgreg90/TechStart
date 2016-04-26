@@ -247,3 +247,14 @@ h4 {
   padding: 1em 1em 0 1em;
   margin-bottom: 1em;
 }
+
+.social_media_box:hover p {
+  text-decoration: none;
+}
+
+.company_info_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}

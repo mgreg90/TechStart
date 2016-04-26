@@ -32,6 +32,7 @@ class CompaniesController < ApplicationController
     @zip = Company.find(params[:id]).zip
     @meetup = Company.find(params[:id]).meetup
     @logo = Company.find(params[:id]).logo
+    @benefits = Company.find(params[:id]).benefits
   end
 
   # GET /companies/new
@@ -91,6 +92,6 @@ class CompaniesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_params
-    params.require(:company).permit(:id, :name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo)
+    params.require(:company).permit(:id, :name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo, :benefits)
   end
 end
