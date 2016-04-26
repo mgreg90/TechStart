@@ -100,7 +100,7 @@ color: #5a5a5a;
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
+  
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
