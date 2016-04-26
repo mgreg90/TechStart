@@ -108,10 +108,11 @@
     <div class="row featurette">
       <div class="owl-carousel">
         <% @companies.each do |company|%>
-        <div class="slide"><%= image_tag company.logo %></div>
+        <div class="slide"><%= image_tag(company.logo) %></div>
         <% end %>
       </div>
     </div>
+    <!-- end company scroll bar -->
     <hr class="featurette-divider">
     <!-- FOOTER -->
     <footer>
