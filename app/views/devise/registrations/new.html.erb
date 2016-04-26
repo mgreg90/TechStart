@@ -1,21 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
-
   <title>Project-Zero</title>
-  <!-- <link href="carousel.css" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="owl.carousel.css"> -->
 </head>
-<!-- NAVBAR
-================================================== -->
 <body>
   <div class="navbar-wrapper">
     <div class="container">
@@ -50,17 +43,14 @@
       <h2>Sign up!</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
-
       <div class="field">
         <%= f.label :username %><br />
         <%= f.text_field :username, autofocus: true %>
       </div>
-
       <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>
       </div>
-
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
@@ -68,19 +58,15 @@
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
-
       <div class="field">
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
-
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>
       <% end %>
-
       <%= render "devise/shared/links" %>
-
       <hr>
       <div class="row">
         <div class="col-lg-12">
