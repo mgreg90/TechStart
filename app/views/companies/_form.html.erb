@@ -10,8 +10,12 @@
   </ul>
 </div>
 <% end %>
+<div class="actions form_button">
+  <%= f.submit %>
+</div>
 <div class = "form_container">
   <div class = "form_div">
+    <h4>Name & Location</h4>
     <div class="field">
       <%= f.label :name, "Company Name:" %><br>
       <%= f.text_field :name %>
@@ -34,6 +38,7 @@
     </div>
   </div>
   <div class = "form_div">
+    <h4>Company Info</h4>
     <div class="field">
       <%= f.label "Mission Statement:" %><br>
       <%= f.text_area :about %>
@@ -68,6 +73,7 @@
     </div>
   </div>
   <div class = "form_div">
+    <h4>Contact & Social Media</h4>
     <div class="field">
       <%= f.label :twitter, "Twitter Handle:" %><br>
       <%= f.text_field :twitter %>
@@ -96,9 +102,6 @@
       <%= f.label :pointOfContactPhone, "Point of Contact Phone Number:" %><br>
       <%= f.text_field :pointOfContactPhone %>
     </div>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
   </div>
 </div>
 <% end %>
