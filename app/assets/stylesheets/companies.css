@@ -213,6 +213,12 @@ h4 {
 
 .carousel-control.left {
   background-color: linear-gradient(rgba(255,0,0,1),rgba(0, 0, 0, 1));
+  bottom: -100px;
+}
+
+.carousel-control.right {
+  background-color: linear-gradient(rgba(255,0,0,1),rgba(0, 0, 0, 1));
+  bottom: -100px;
 }
 
 .twitter-timeline {
@@ -263,5 +269,4 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   height: 80%;
->>>>>>> abdd15a39a49c0682776a5af4fa1f3e60b92f6da
 }
