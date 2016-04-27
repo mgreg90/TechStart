@@ -40,9 +40,9 @@
               <ul class="nav navbar-nav">
                 <li><%= link_to 'Home', root_path, method: :get %></li>
                 <% if !current_user.nil? %>
-                <li><%= link_to 'My Company', current_user.companies.first, method: :get %></li>
+                <li><%= link_to 'My Company', current_user.companies.find(3), method: :get %></li>
                 <li><%= link_to 'Create A Company', new_company_path, method: :get %></li>
-                <li><%= link_to 'Edit My Company', edit_company_path(current_user.companies.first), method: :get %></li>
+                <li><%= link_to 'Edit My Company', edit_company_path(current_user.companies.find(3)), method: :get %></li>
                 <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li><!-- button to log out solves path issues -->
                 <% else %>
                 <li><%= link_to 'Log In', user_session_path, method: :post %></li>
@@ -101,7 +101,7 @@
                 <p><%= @linkedin %></p>
               </div>
             </a>
-            <a href="https://www.instagram.com/<%= @instagram.downcase %>">
+            <a href="https://www.instagram.com/<%= @instagram[1,@instagram.length].downcase %>">
               <div class="social_media_box">
                 <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
                 <p><%= @instagram %></p>
@@ -114,24 +114,24 @@
       <!-- /.row -->
 
       <!-- Content Row -->
-      <div class="row">
+      <div class="row lower_row_show_page">
         <div class="col-md-4 company_info_list">
           <h2>Company Information</h2>
           <ul class = "company_info_list">
             <li>Name: <%= @name %></li><br>
             <li>Industry: <%= @industry %></li><br>
             <li>Specialties: <%= @amenities %></li><br>
-            <li># of Employees: <%= @numberofemployees %></li><br>
+            <li>Employees: <%= @numberofemployees %></li><br>
             <li>Benefits: <%= @benefits %></li><br>
           </ul>
         </div>
         <!-- /.col-md-4 -->
-        <div class="col-md-4">
-          <h2>More Info</h2>
+        <div class="col-md-4 middle_bottom_show_page">
+          <h2>Perks</h2>
           <ul class = "company_info_list">
-            <li></li>
-            <li></li>
-            <li></li>
+            <% @perks_array.each do |perk| %>
+            <li><%= perk %></li>
+            <% end %>
           </ul>
         </div>
         <!-- /.col-md-4 -->

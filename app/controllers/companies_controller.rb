@@ -33,6 +33,8 @@ class CompaniesController < ApplicationController
     @meetup = Company.find(@id).meetup
     @logo = Company.find(@id).logo
     @benefits = Company.find(@id).benefits
+    @year_founded = Company.find(@id).year_founded
+    @perks_array = @perks.split(/\r\n/)
   end
 
   # GET /companies/new
@@ -95,6 +97,6 @@ class CompaniesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def company_params
 
-    params.require(:company).permit(:id, :name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo, :benefits, :user_id)
+    params.require(:company).permit(:id, :name, :address, :about, :twitter, :linkedin, :instagram, :perks, :ceo, :numberofemployees, :pointOfContactName, :pointOfContactPhone, :pointOfContactEmail, :industry, :amenities, :qualifications, :city, :state, :zip, :meetup, :logo, :benefits, :user_id, :year_founded)
   end
 end

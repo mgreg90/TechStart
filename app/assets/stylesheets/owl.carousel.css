@@ -223,5 +223,6 @@
 
 .owl-prev, .owl-next {
   font-size: 16pt;
-  padding: 0.5em;
+  padding: 1em;
+  /*border-radius:*/
 }

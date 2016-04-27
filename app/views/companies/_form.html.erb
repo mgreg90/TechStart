@@ -33,9 +33,9 @@
             <ul class="nav navbar-nav">
               <li><%= link_to 'Home', root_path, method: :get %></li>
               <% if !current_user.nil? %>
-              <li><%= link_to 'My Company', current_user.companies.first, method: :get %></li>
+              <li><%= link_to 'My Company', current_user.companies.find(3), method: :get %></li>
               <li><%= link_to 'Create A Company', new_company_path, method: :get %></li>
-              <li><%= link_to 'Edit My Company', current_user.companies.first, method: :get %></li>
+              <li><%= link_to 'Edit My Company', current_user.companies[2], method: :get %></li>
               <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li><!-- button to log out solves path issues -->
               <% else %>
               <li><%= link_to 'Log In', user_session_path, method: :post %></li>
@@ -95,6 +95,10 @@
       <%= f.text_area :about %>
     </div>
     <div class="field">
+      <%= f.label :year_founded, "Year Founded:" %><br>
+      <%= f.text_field :year_founded %>
+    </div>
+    <div class="field">
       <%= f.label :numberofemployees, "Number of Employees:" %><br>
       <%= f.text_field :numberofemployees %>
     </div>
@@ -104,7 +108,7 @@
     </div>
     <div class="field">
       <%= f.label :perks, "Choose Perks:" %><br>
-      <%= f.text_field :perks %>
+      <%= f.text_area :perks %>
     </div>
     <div class="field">
       <%= f.label :industry, "Choose Industry" %><br>

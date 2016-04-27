@@ -7,12 +7,13 @@ They will automatically be included in application.css.
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 li {
-  font-size: 16pt;
+  font-size: 12pt;
 }
 body {
   max-width: 75vw;
   margin-left: auto;
   margin-right: auto;
+  background-color: #F5F5F5;
 }
 
 .form_button {
@@ -277,4 +278,14 @@ h4 {
   flex-direction: column;
   justify-content: space-between;
   height: 80%;
+}
+
+.lower_row_show_page {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.middle_bottom_show_page {
+  justify-content: flex-start;
 }
