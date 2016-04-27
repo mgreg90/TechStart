@@ -9,11 +9,16 @@ They will automatically be included in application.css.
 li {
   font-size: 16pt;
 }
-/*body {
-padding-bottom: 40px;
-color: #5a5a5a;
+body {
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
 }
-*/
+
+.form_button {
+  position: relative;
+  right: 80px;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
